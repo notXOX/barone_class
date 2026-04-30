@@ -1,7 +1,0 @@
-Agregando texto a un archivo
-
-ls - listar directorios
-cd - seleccionar un directorio
-mkdrir - crea un directorio
-touch - crea un archivo
-nano - editor de texto
