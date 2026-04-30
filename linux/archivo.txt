@@ -1,0 +1,4 @@
+hola mundo
+esta es mi tarea de bash scripting
+tengo que modificar archivos
+
