@@ -7,7 +7,7 @@ new_user() {
     user=$(zenity --entry --title="Creacion de usuario" --text="Ingrese el nombre")
     pass=$(zenity --entry --title="Agregar contraseña" --text="Ingrese la contraseña" --hide-text)
     # Agrega el usuario
-    sudo useradd -m $user -s /bin/bash
+    sudo useradd -m "$user" -s /bin/bash
     # Asigna la contraseña
     echo "$user:$pass" | sudo chpasswd
 
@@ -20,7 +20,7 @@ del_user() {
     zenity --question --title="Confirmacion" --text="¿Seguro que quieres eliminar a: $user ?"
 
     if [ $? -eq 0 ];then
-        sudo userdel -r $user
+        sudo userdel -r "$user"
         zenity --info --title="Eliminacion de usuario" --text="El usuario $user fue eliminado satisfactoriamente"
     else 
         zenity --error --title="Eliminacion de usuario" --text="No se pudo realizar la operacion"
@@ -29,7 +29,7 @@ del_user() {
 
 add_group() {
     group=$(zenity --entry --title="Creacion de grupo" --text="Ingrese el nombre del grupo")
-    sudo groupadd $group
+    sudo groupadd "$group"
 
     zenity --info --title="Creacion de grupo" --text="El grupo $group fue creado satisfactoriamente"
 }
@@ -38,7 +38,7 @@ add_user_group() {
     user=$(zenity --entry --title="Seleccion de usuario" --text="Ingrese el usuario a ser movido")
     group=$(zenity --entry --title="Seleccion de grupo" --text="Ingrese el grupo de destino")
 
-    sudo usermod -aG $group $user
+    sudo usermod -aG "$group" "$user"
 
     zenity --info --title="Migracion de usuario" --text="El usuario $user fue movido a $group correctamente"
 }

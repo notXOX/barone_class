@@ -14,7 +14,7 @@ fi
 
 # Funciones del script
 reemplazar_palabra() {
-    old=$(zenity --entry --title="Palabra a modificar" \ 
+    old=$(zenity --entry --title="Palabra a modificar" \
     --text="Escriba la palabra a modificar")
 
     [ -z "$old" ] && return # Significa que si la variable esta vacía, retorne al inicio
@@ -44,7 +44,7 @@ eliminar_lineas() {
 
 convertir_texto() {
     op=$(zenity --list --title="Menu de conversion de texto" \
-    --colum="Opciones" \
+    --column="Opciones" \
     "Mayusculas" \
     "Minusculas")
 
