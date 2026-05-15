@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primera pagina web</title>
+    <link rel = "stylesheet" href = "style.css">
+</head>
+<body>
+    <nav>
+        <button>Inicio</button>
+        <button>Login</button>
+        <button>Registro</button>
+        <button>Contactanos</button>
+    </nav>
+    <h1 class = "titulo"> Mi primera pagina web </h1>
+    {{#each usuarios}}
+        <h2> {{../prefix}} {{nombre}} </h2>
+    {{/each}}
+    <script src="index.js"></script>
+</body>
+</html>

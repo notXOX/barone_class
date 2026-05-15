@@ -1,7 +1,7 @@
 const express = require("express") // llamamos al modulo de express
 const servidor = express() // le paso la config del server a la variable servidor
 const path = require("path")
-const ruta = path.join(__dirname, "frontend")
+const ruta = path.join(__dirname, "views")
 
 servidor.listen(8080) // el puerto del server
 servidor.use(express.static(ruta)) // definimos rutas estaticas
